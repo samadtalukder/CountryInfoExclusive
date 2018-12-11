@@ -1,0 +1,20 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="CardViewStyle" parent="@style/CardView" tools:ignore="PrivateResource">
+        <item name="android:layout_marginTop">0.0dip</item>
+        <item name="android:layout_marginBottom">8.0dip</item>
+        <item name="android:layout_marginStart">0.0dip</item>
+        <item name="android:layout_marginEnd">0.0dip</item>
+        <item name="cardCornerRadius">0.0dip</item>
+        <item name="cardElevation">2.0dip</item>
+    </style>
+
+</resources>

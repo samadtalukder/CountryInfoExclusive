@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="location_card_detail_margin_top_bottom">8dp</dimen>
+    <dimen name="location_card_detail_title_text_size">12sp</dimen>
+    <dimen name="location_card_detail_title_width">100dp</dimen>
+    <dimen name="location_card_detail_value_text_size">16sp</dimen>
+    <dimen name="location_card_header_height">50dp</dimen>
+    <dimen name="location_card_title_text_size">24sp</dimen>
+    <dimen name="keyline_default">16dp</dimen>
+    <dimen name="map_card_detail_title_text_size">12sp</dimen>
+    <dimen name="map_card_detail_value_text_size">16sp</dimen>
+    <dimen name="map_card_header_height">72dp</dimen>
+    <dimen name="map_card_title_text_size">24sp</dimen>
+</resources>
