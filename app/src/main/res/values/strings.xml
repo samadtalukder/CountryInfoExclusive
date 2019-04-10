@@ -22,4 +22,5 @@
     <string name="area">Area</string>
     <string name="sub_region">Sub Region</string>
     <string name="region">Region</string>
+    <string name="google_maps_key">AIzaSyAjMfTSh0zUGN53Y0-S_-SzHIbplmWGW9w;</string>
 </resources>
