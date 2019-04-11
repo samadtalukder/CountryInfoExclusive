@@ -1,0 +1,1008 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/details_swipe_data_refresh"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <android.support.v7.widget.CardView
+                style="@style/CardViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/countryFlagIV"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/worldwide" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/countryNameCV"
+                style="@style/CardViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/card_background">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/card_header_height"
+                        android:background="@color/colorPrimary"
+                        android:paddingLeft="@dimen/_16dp"
+                        android:paddingRight="@dimen/_16dp">
+
+                        <ImageView
+                            android:id="@+id/countryIcon"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/flag" />
+
+                        <TextView
+                            android:id="@+id/countryName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/_16dp"
+                            android:layout_toRightOf="@id/countryIcon"
+                            android:gravity="center"
+                            android:text="@string/country_names"
+                            android:textColor="@color/card_title_text_color"
+                            android:textSize="@dimen/card_title_text_size" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_16dp"
+                        android:layout_marginRight="@dimen/_16dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/card_detail_margin_top_bottom"
+                            android:layout_marginBottom="@dimen/card_detail_margin_top_bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="@dimen/card_detail_title_width"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center_vertical"
+                                android:text="@string/country_name"
+                                android:textColor="@color/card_detail_title"
+                                android:textSize="@dimen/card_detail_title_text_size"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/countryNameTV"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="@color/card_detail_value"
+                                android:textSize="@dimen/card_detail_value_text_size"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/card_detail_margin_top_bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="@dimen/card_detail_title_width"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center_vertical"
+                                android:text="@string/capital"
+                                android:textColor="@color/card_detail_title"
+                                android:textSize="@dimen/card_detail_title_text_size"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/capitalNameTV"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="@color/card_detail_value"
+                                android:textSize="@dimen/card_detail_value_text_size"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/card_detail_margin_top_bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="@dimen/card_detail_title_width"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center_vertical"
+                                android:text="@string/alpha_code"
+                                android:textColor="@color/card_detail_title"
+                                android:textSize="@dimen/card_detail_title_text_size"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/alphaCodeTV"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="@color/card_detail_value"
+                                android:textSize="@dimen/card_detail_value_text_size"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/card_detail_margin_top_bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="@dimen/card_detail_title_width"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center_vertical"
+                                android:text="@string/calling_code"
+                                android:textColor="@color/card_detail_title"
+                                android:textSize="@dimen/card_detail_title_text_size"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/callingCodeTV"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="@color/card_detail_value"
+                                android:textSize="@dimen/card_detail_value_text_size"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/card_detail_margin_top_bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="@dimen/card_detail_title_width"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center_vertical"
+                                android:text="@string/population"
+                                android:textColor="@color/card_detail_title"
+                                android:textSize="@dimen/card_detail_title_text_size"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/populationTV"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="@color/card_detail_value"
+                                android:textSize="@dimen/card_detail_value_text_size"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/languageCV"
+                style="@style/CardViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/card_background">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/card_header_height"
+                        android:background="@color/colorPrimary"
+                        android:paddingLeft="@dimen/_16dp"
+                        android:paddingRight="@dimen/_16dp">
+
+                        <ImageView
+                            android:id="@+id/languageIcon"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/language" />
+
+                        <TextView
+                            android:id="@+id/languageText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/_16dp"
+                            android:layout_toRightOf="@id/languageIcon"
+                            android:gravity="center"
+                            android:text="@string/language"
+                            android:textColor="@color/card_title_text_color"
+                            android:textSize="@dimen/card_title_text_size" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_16dp"
+                        android:layout_marginRight="@dimen/_16dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/card_detail_margin_top_bottom"
+                            android:layout_marginBottom="@dimen/card_detail_margin_top_bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="@dimen/card_detail_title_width"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center_vertical"
+                                android:text="@string/native_name"
+                                android:textColor="@color/card_detail_title"
+                                android:textSize="@dimen/card_detail_title_text_size"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/nativeLanguageTV"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="@color/card_detail_value"
+                                android:textSize="@dimen/card_detail_value_text_size"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/card_detail_margin_top_bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="@dimen/card_detail_title_width"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center_vertical"
+                                android:text="@string/language_name"
+                                android:textColor="@color/card_detail_title"
+                                android:textSize="@dimen/card_detail_title_text_size"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/languageNameTV"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="@color/card_detail_value"
+                                android:textSize="@dimen/card_detail_value_text_size"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/geographyCV"
+                style="@style/CardViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/card_background">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/card_header_height"
+                        android:background="@color/colorPrimary"
+                        android:paddingLeft="@dimen/_16dp"
+                        android:paddingRight="@dimen/_16dp">
+
+                        <ImageView
+                            android:id="@+id/geographyIcon"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/geography" />
+
+                        <TextView
+                            android:id="@+id/geographyText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/_16dp"
+                            android:layout_toRightOf="@id/geographyIcon"
+                            android:gravity="center"
+                            android:text="@string/geography"
+                            android:textColor="@color/card_title_text_color"
+                            android:textSize="@dimen/card_title_text_size" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_16dp"
+                        android:layout_marginRight="@dimen/_16dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/card_detail_margin_top_bottom"
+                            android:layout_marginBottom="@dimen/card_detail_margin_top_bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="@dimen/card_detail_title_width"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center_vertical"
+                                android:text="@string/region"
+                                android:textColor="@color/card_detail_title"
+                                android:textSize="@dimen/card_detail_title_text_size"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/regionTV"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="@color/card_detail_value"
+                                android:textSize="@dimen/card_detail_value_text_size"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/card_detail_margin_top_bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="@dimen/card_detail_title_width"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center_vertical"
+                                android:text="@string/sub_region"
+                                android:textColor="@color/card_detail_title"
+                                android:textSize="@dimen/card_detail_title_text_size"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/subRegionTV"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="@color/card_detail_value"
+                                android:textSize="@dimen/card_detail_value_text_size"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/card_detail_margin_top_bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="@dimen/card_detail_title_width"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center_vertical"
+                                android:text="@string/area"
+                                android:textColor="@color/card_detail_title"
+                                android:textSize="@dimen/card_detail_title_text_size"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/areaTV"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="@color/card_detail_value"
+                                android:textSize="@dimen/card_detail_value_text_size"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/card_detail_margin_top_bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="@dimen/card_detail_title_width"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center_vertical"
+                                android:text="@string/gini_ratio"
+                                android:textColor="@color/card_detail_title"
+                                android:textSize="@dimen/card_detail_title_text_size"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/giniRatioTV"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="@color/card_detail_value"
+                                android:textSize="@dimen/card_detail_value_text_size"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <!--
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/regionalBlocsCV"
+                        style="@style/CardViewStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/card_background">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/card_header_height"
+                                android:background="@color/colorPrimary"
+                                android:paddingLeft="@dimen/_16dp"
+                                android:paddingRight="@dimen/_16dp">
+
+                                <ImageView
+                                    android:id="@+id/regionalBlocsIcon"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:layout_centerVertical="true"
+                                    android:src="@drawable/ic_location_city_white_24dp" />
+
+                                <TextView
+                                    android:id="@+id/regionalBlocsText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="@dimen/_16dp"
+                                    android:layout_toRightOf="@id/regionalBlocsIcon"
+                                    android:gravity="center"
+                                    android:text="@string/regional_blocs"
+                                    android:textColor="@color/card_title_text_color"
+                                    android:textSize="@dimen/card_title_text_size" />
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_16dp"
+                                android:layout_marginRight="@dimen/_16dp"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/card_detail_margin_top_bottom"
+                                    android:layout_marginBottom="@dimen/card_detail_margin_top_bottom"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="@dimen/card_detail_title_width"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:gravity="center_vertical"
+                                        android:text="Name"
+                                        android:textColor="@color/card_detail_title"
+                                        android:textSize="@dimen/card_detail_title_text_size"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/regionalBlocsNameTV"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:textColor="@color/card_detail_value"
+                                        android:textSize="@dimen/card_detail_value_text_size"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/card_detail_margin_top_bottom"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="@dimen/card_detail_title_width"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:gravity="center_vertical"
+                                        android:text="@string/others_name"
+                                        android:textColor="@color/card_detail_title"
+                                        android:textSize="@dimen/card_detail_title_text_size"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/regionalBlocsOtherNameTV"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:textColor="@color/card_detail_value"
+                                        android:textSize="@dimen/card_detail_value_text_size"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+            -->
+
+            <!--
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/translationsCV"
+                        style="@style/CardViewStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/card_background">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/card_header_height"
+                                android:background="@color/colorPrimary"
+                                android:paddingLeft="@dimen/_16dp"
+                                android:paddingRight="@dimen/_16dp">
+
+                                <ImageView
+                                    android:id="@+id/translationsIcon"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:layout_centerVertical="true"
+                                    android:src="@drawable/ic_location_city_white_24dp" />
+
+                                <TextView
+                                    android:id="@+id/translationsText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="@dimen/_16dp"
+                                    android:layout_toRightOf="@id/translationsIcon"
+                                    android:gravity="center"
+                                    android:text="@string/translations"
+                                    android:textColor="@color/card_title_text_color"
+                                    android:textSize="@dimen/card_title_text_size" />
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_16dp"
+                                android:layout_marginRight="@dimen/_16dp"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/card_detail_margin_top_bottom"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="@dimen/card_detail_title_width"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:gravity="center_vertical"
+                                        android:text="@string/translations"
+                                        android:textColor="@color/card_detail_title"
+                                        android:textSize="@dimen/card_detail_title_text_size"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/translationsTV"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:textColor="@color/card_detail_value"
+                                        android:textSize="@dimen/card_detail_value_text_size"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+            -->
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/currenciesCV"
+                style="@style/CardViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/card_background">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/card_header_height"
+                        android:background="@color/colorPrimary"
+                        android:paddingLeft="@dimen/_16dp"
+                        android:paddingRight="@dimen/_16dp">
+
+                        <ImageView
+                            android:id="@+id/currenciesIcon"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/euro" />
+
+                        <TextView
+                            android:id="@+id/currenciesText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/_16dp"
+                            android:layout_toRightOf="@id/currenciesIcon"
+                            android:gravity="center"
+                            android:text="@string/currencies"
+                            android:textColor="@color/card_title_text_color"
+                            android:textSize="@dimen/card_title_text_size" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_16dp"
+                        android:layout_marginRight="@dimen/_16dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/card_detail_margin_top_bottom"
+                            android:layout_marginBottom="@dimen/card_detail_margin_top_bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="@dimen/card_detail_title_width"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center_vertical"
+                                android:text="@string/currencies_code"
+                                android:textColor="@color/card_detail_title"
+                                android:textSize="@dimen/card_detail_title_text_size"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/currenciesCodeTV"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="@color/card_detail_value"
+                                android:textSize="@dimen/card_detail_value_text_size"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/card_detail_margin_top_bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="@dimen/card_detail_title_width"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center_vertical"
+                                android:text="@string/currencies_name"
+                                android:textColor="@color/card_detail_title"
+                                android:textSize="@dimen/card_detail_title_text_size"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/currenciesNameTV"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="@color/card_detail_value"
+                                android:textSize="@dimen/card_detail_value_text_size"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/card_detail_margin_top_bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="@dimen/card_detail_title_width"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center_vertical"
+                                android:text="@string/currencies_symbol"
+                                android:textColor="@color/card_detail_title"
+                                android:textSize="@dimen/card_detail_title_text_size"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/currenciesSymbolTV"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="@color/card_detail_value"
+                                android:textSize="@dimen/card_detail_value_text_size"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <!--
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/borderCV"
+                        style="@style/CardViewStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/card_background">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/card_header_height"
+                                android:background="@color/colorPrimary"
+                                android:paddingLeft="@dimen/_16dp"
+                                android:paddingRight="@dimen/_16dp">
+
+                                <ImageView
+                                    android:id="@+id/borderIcon"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:layout_centerVertical="true"
+                                    android:src="@drawable/ic_location_city_white_24dp" />
+
+                                <TextView
+                                    android:id="@+id/borderText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="@dimen/_16dp"
+                                    android:layout_toRightOf="@id/borderIcon"
+                                    android:gravity="center"
+                                    android:text="Borders"
+                                    android:textColor="@color/card_title_text_color"
+                                    android:textSize="@dimen/card_title_text_size" />
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_16dp"
+                                android:layout_marginRight="@dimen/_16dp"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/card_detail_margin_top_bottom"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="@dimen/card_detail_title_width"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:gravity="center_vertical"
+                                        android:text="Border"
+                                        android:textColor="@color/card_detail_title"
+                                        android:textSize="@dimen/card_detail_title_text_size"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/borderTV"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:textColor="@color/card_detail_value"
+                                        android:textSize="@dimen/card_detail_value_text_size"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+            -->
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/locationsCV"
+                style="@style/CardViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/card_background">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/card_header_height"
+                        android:background="@color/colorPrimary"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp">
+
+                        <ImageView
+                            android:id="@+id/locationsIcon"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/location" />
+
+                        <TextView
+                            android:id="@+id/locationsText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="16dp"
+                            android:layout_toRightOf="@id/locationsIcon"
+                            android:gravity="center"
+                            android:text="@string/location_map"
+                            android:textColor="@color/card_title_text_color"
+                            android:textSize="24sp" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:orientation="vertical">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp">
+
+                            <fragment
+                                android:id="@+id/mapView"
+                                android:name="com.google.android.gms.maps.SupportMapFragment"
+                                android:layout_width="match_parent"
+                                android:layout_height="200dp" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="58dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:baselineAligned="false"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1.0"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/latitudeTV"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:maxLines="1"
+                                    android:textColor="@color/card_detail_value"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="@string/map_latitude"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1.0"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/longitudeTV"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:maxLines="1"
+                                    android:textColor="@color/card_detail_value"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="@string/map_longitude"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1.0"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/timezoneTV"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:maxLines="1"
+                                    android:textColor="@color/card_detail_value"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="@string/time_zone"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</android.support.v4.widget.SwipeRefreshLayout>

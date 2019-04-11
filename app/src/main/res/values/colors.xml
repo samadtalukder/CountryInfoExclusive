@@ -3,17 +3,10 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
-    <color name="ip_card_text">#ffffffff</color>
-    <color name="ip_card_background">#ff116b7c</color>
-    <color name="location_card_background">#ffffffff</color>
-    <color name="location_card_header_color">#ffe64a19</color>
-    <color name="location_card_title_text_color">#ffffffff</color>
-    <color name="location_card_detail_title">#ff7f8c8d</color>
-    <color name="location_card_detail_value">#ff7f8c8d</color>
-    <color name="map_card_background">#ffffffff</color>
-    <color name="map_card_detail_title">#ff7f8c8d</color>
-    <color name="map_card_detail_value">#ff7f8c8d</color>
-    <color name="map_card_icon_custom_color">#ffe64a19</color>
-    <color name="map_card_icon_me_color">#ff0288d1</color>
-    <color name="map_card_title_text_color">#ff7f8c8d</color>
+    <color name="card_background">#ffffffff</color>
+    <color name="card_header_color">#ffe64a19</color>
+    <color name="card_title_text_color">#ffffffff</color>
+    <color name="card_detail_title">#ff7f8c8d</color>
+    <color name="card_detail_value">#000000</color>
+
 </resources>

@@ -2,11 +2,11 @@
     <string name="app_name">Country Info Exclusive</string>
     <string name="alternative_name">Alternative Name</string>
     <string name="official_name">Official Name</string>
-    <string name="common_name">Common Name</string>
-    <string name="native_name">Native Name</string>
+    <string name="common_name">Country Name</string>
+    <string name="native_name">Native Language</string>
     <string name="language_name">Language Name</string>
     <string name="language">Language</string>
-    <string name="country_names">Country Names</string>
+    <string name="country_names">Country Info</string>
     <string name="geography">Geography</string>
     <string name="location_map">Location Map</string>
     <string name="map_latitude">Map Latitude</string>
@@ -22,5 +22,11 @@
     <string name="area">Area</string>
     <string name="sub_region">Sub Region</string>
     <string name="region">Region</string>
-    <string name="google_maps_key">AIzaSyAjMfTSh0zUGN53Y0-S_-SzHIbplmWGW9w;</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyCNrHw1x9u_STfcCGdKxKPLEjlTAYbw-zs</string>
+    <string name="capital">Capital</string>
+    <string name="country_name">Country Name</string>
+    <string name="alpha_code">Alpha Code</string>
+    <string name="calling_code">Calling Code</string>
+    <string name="population">Population</string>
+    <string name="gini_ratio">Gini ratio</string>
 </resources>
