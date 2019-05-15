@@ -29,4 +29,5 @@
     <string name="calling_code">Calling Code</string>
     <string name="population">Population</string>
     <string name="gini_ratio">Gini ratio</string>
+    <string name="action_search">Search</string>
 </resources>
